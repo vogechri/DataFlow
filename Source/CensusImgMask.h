@@ -265,18 +265,15 @@ public:
             events[pos1*ringsize*2 + inposi           ] = -value;
             events[pos1*ringsize*2 + inposi + ringsize] = Scalar(0);
           }
-          else // flipped the sign of those entries for debug - thi ssucks census only if eps==0 else sucks - so this is never entered:
+          else 
           {
-            // that stupid flip (above + lower two -) is dumbass but works better - no this is it
             events[pos0            + inpos            ] =  value;
             events[pos0            + inpos + ringsize ] = -value;// +
             // neighbor as well(if exists):
             events[pos1*ringsize*2 + inposi           ] =  value;// -
             events[pos1*ringsize*2 + inposi + ringsize] = -value;
           }
-//          bimg[pos0b+inpos] = val1-val2;
-          // neighbor as well(if exists):
-//          bimg[pos1*ringsize + inposi] = val2-val1;
+
 #else
           Scalar localDiff      = fabs(val1-val2) - cEps;
 //          Scalar localWeight    = Scalar(2.)-std::pow(2., Scalar(0.6-localDiff*32.));
@@ -297,9 +294,8 @@ public:
             events[pos1*ringsize*2 + inposi           ] = -value*localWeight;
             events[pos1*ringsize*2 + inposi + ringsize] = Scalar(0);
           }
-          else // flipped the sign of those entries for debug - thi ssucks census only if eps==0 else sucks - so this is never entered:
+          else
           {
-            // that stupid flip (above + lower two -) is dumbass but works better - no this is it
             events[pos0            + inpos            ] =  value*localWeight;
             events[pos0            + inpos + ringsize ] = -value*localWeight;// +
             // neighbor as well(if exists):

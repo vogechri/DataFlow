@@ -68,15 +68,7 @@ namespace Own{
     SparseMatrix(): init(false), pcg(false)  { };
 
     SparseMatrix( int nRows, int nCols ): init(false), pcg(false), nrows(nRows), ncols(nCols)  { };
-/*
-    SparseMatrix( Scalar*& ids_i, Scalar*& ids_j, Scalar*& ids_v, int nRows, int nCols ): init(true), pcg(false), values(ids_v), columns(ids_i), rows(ids_j), nrows(nRows), ncols(nCols)  { };
 
-    SparseMatrix( Scalar*& ids_i, Scalar*& ids_j, Scalar*& ids_v, std::vector<Scalar>& normalizerR, std::vector<Scalar>& normalizerC ): _init(true), _pcg(false), values(ids_v), columns(ids_i), rows(ids_j)  
-    {
-      pcg_row = normalizerR;
-      pcg_col = normalizerC;
-    };
-*/
     ~SparseMatrix() { };
 
     /////////////////////////////////
@@ -121,21 +113,21 @@ namespace Own{
       if (!pcg)
       for (int i=0; i<ncols; i++) // Loop through columns
       {
-         int stop = columns[i+1]-1;
+         int stop = columns[i+1];
          Scalar rhs  = x[i];
-         for (int k=columns[i]-1; k<stop; k++) // Loop through non-zeros in ith column
+         for (int k=columns[i]; k<stop; k++) // Loop through non-zeros in ith column
          {
-            z[ rows[k]-1 ] += values[k] * rhs;
+            z[ rows[k] ] += values[k] * rhs;
          }
       }
       else
       for (int i=0; i<ncols; i++) // Loop through columns
       {
-         int stop = columns[i+1]-1;
+         int stop = columns[i+1];
          Scalar rhs  = x[i];
-         for (int k=columns[i]-1; k<stop; k++) // Loop through non-zeros in ith column
+         for (int k=columns[i]; k<stop; k++) // Loop through non-zeros in ith column
          {
-            z[ rows[k]-1 ] += pcg_row[rows[k]-1] * values[k] * rhs;
+            z[ rows[k] ] += pcg_row[rows[k]] * values[k] * rhs;
          }
       }
     }
@@ -148,20 +140,20 @@ namespace Own{
 #pragma omp parallel
       for (int i=0; i<ncols; i++) // Loop through columns
       {
-         int stop = columns[i+1]-1;
-         for (int k=columns[i]-1; k<stop; k++) // Loop through non-zeros in ith column
+         int stop = columns[i+1];
+         for (int k=columns[i]; k<stop; k++) // Loop through non-zeros in ith column
          {
-            z[ i ] -= values[k] * x[ rows[k]-1 ];
+            z[ i ] -= values[k] * x[ rows[k] ];
          }
       }
       else
 #pragma omp parallel
       for (int i=0; i<ncols; i++) // Loop through columns
       {
-         int stop = columns[i+1]-1;
-         for (int k=columns[i]-1; k<stop; k++) // Loop through non-zeros in ith column
+         int stop = columns[i+1];
+         for (int k=columns[i]; k<stop; k++) // Loop through non-zeros in ith column
          {
-            z[ i ] -= pcg_col[i] * values[k] * x [ rows[k]-1 ];
+            z[ i ] -= pcg_col[i] * values[k] * x [ rows[k] ];
          }
       }    
     }
