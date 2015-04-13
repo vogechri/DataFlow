@@ -4,7 +4,7 @@
 %%% C. Vogel, S. Roth, K. Schindler, 
 %%% In: German Conference on Pattern Recognition (GCPR), Saarbrücken, Germany, 2013
 
-function [u, v, w, p, q] = tgv_run_flow(I1, I2, u, v, w, p, q, par, mask, level_constraints )
+function [u, v, w, p, q] = data_flow_run(I1, I2, u, v, w, p, q, par, mask, level_constraints )
 
 % TGV only parameters, relative weight is important here, so fix alpha1 =1
 alpha0 = 2; % 1.5 parameter defining the influence of second integral for TGV

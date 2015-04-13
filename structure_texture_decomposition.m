@@ -1,6 +1,7 @@
-%
-%   ROF/structure texture decomposition
-%
+% structure texture decomposition according to 
+% Structure-Texture Image Decomposition--Modeling, Algorithms, and Parameter Selection IJCV 2006
+% Author: Christoph Vogel
+% fast version -- no masked treatment included yet
 function outI = structure_texture_decomposition(I, par, maxIterations)
 
 factor  = par.structure_texture_factor;
@@ -72,8 +73,6 @@ for iIm = 1:size(I,3)
 
     I = scale_image(I, 0.0, 1.0);
   
-  outI(:,:,iIm) = I;
-  
-%  outI(:,:,iIm) = u;
-  
+    outI(:,:,iIm) = I;
+    
 end

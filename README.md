@@ -55,15 +55,15 @@ INSTALLING & RUNNING
 	Adjust the compiler flags accordingly for your purposes 
 	(defaults should work in most cases). 
 	
-3.	From folder DataFlow run calltestTGV( xx ) - 
+3.	From folder DataFlow run calltest( xx ) - 
 	example given as comment in the code.
 	This will execute a kitti example.
 
 4.	Otherwise load images I1, I2 and run :
-	flow = TGV_flow(1.25/255, 12.333, 3, 0.9, I1, I2, 10, 2, 1, 0, 0.5, 16, 0, 1)
+	flow = Data_flow(1.25/255, 12.333, 3, 0.9, I1, I2, 10, 2, 1, 0, 0.5, 16, 0, 1)
 	'flow' contains the computed 2d flow as usual.
 	Here I1, I2 are the input images (gray-level only so far).
-	All parameter are explained in the script, TGV_flow.
+	All parameter are explained in the script, Data_flow.
 
 Note that the code should perform slightly better as published.	
 	

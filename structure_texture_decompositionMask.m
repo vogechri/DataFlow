@@ -1,6 +1,6 @@
-%   structure texture decomposition Aujol et al.
-%
-%   Author: Christoph Vogel
+% structure texture decomposition according to 
+% Structure-Texture Image Decomposition--Modeling, Algorithms, and Parameter Selection IJCV 2006
+% Author: Christoph Vogel
 function I = structure_texture_decompositionMask(I, factor, mask)
 
 if factor == 0.5
@@ -49,7 +49,6 @@ end
   end
 
   u=reshape(u,size(I));
-%  figure(1), imagesc(I-u), colormap(gray), colorbar
   I = (1-factor) * I + (I - u) * factor;
   %  I = scale_image(I, 0.0, 1.0);  
 end

@@ -117,7 +117,7 @@ for level = pyramid_levels:-1:1;
   end
   
   if ~exist('constraints','var')
-   [u, v, w, pp, qq] = tgv_run_flow(I1_Pyramid{level}, I2_Pyramid{level}, ...
+   [u, v, w, pp, qq] = data_flow_run(I1_Pyramid{level}, I2_Pyramid{level}, ...
                             u, v, w, pp, qq, p, mask );
   else
     
@@ -128,7 +128,7 @@ for level = pyramid_levels:-1:1;
     level_constraints.p  = bsxfun( @times, level_constraints.p, rescale_cons);
     level_constraints.uv = bsxfun( @times, level_constraints.uv, rescale_cons);
     
-    [u, v, w, pp, qq] = tgv_run_flow(I1_Pyramid{level}, I2_Pyramid{level}, ...
+    [u, v, w, pp, qq] = data_flow_run(I1_Pyramid{level}, I2_Pyramid{level}, ...
                             u, v, w, pp, qq, p, mask, level_constraints );
   end
 end
