@@ -27,7 +27,7 @@ To download that package and read the licensing information provided there.
 DISCLAIMER:
 This demo software has been rewritten for the sake of simplifying the
 implementation. Therefore, the results produced by the code may differ
-from those presented in the papers [4].
+from those presented in the papers [1].
 In fact the results should be a bit better on the KITTI dataset 
 (http://www.cvlibs.net/datasets/kitti/).
 ==========================================================================
