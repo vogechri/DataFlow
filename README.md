@@ -1,6 +1,3 @@
-# DataFlow
-Optical flow code with several data cost functions
-
 ###################################################################
 #                                                                 #
 #                           Data Flow                             #
@@ -14,7 +11,8 @@ Optical flow code with several data cost functions
 
 
 ABOUT:
-This software implements our approach to optical flow estimation [1].
+This software implements our approach to optical flow estimation [1] 
+with several data cost functions. 
 
 
 The additional and optional library
