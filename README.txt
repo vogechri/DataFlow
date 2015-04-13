@@ -11,7 +11,7 @@
 
 
 ABOUT:
-This software implements our approach to optical flow estimation [4].
+This software implements our approach to optical flow estimation [1].
 
 
 The additional and optional library
@@ -35,7 +35,7 @@ In fact the results should be a bit better on the KITTI dataset
 IMPORTANT:
 If you use this software you should cite the following in any resulting publication:
 
-    [4] An Evaluation of Data Costs for Optical Flow
+    [1] An Evaluation of Data Costs for Optical Flow
         C. Vogel, S. Roth and K. Schindler
         In GCPR, Saarbruecken, Germany, September 2013
 
