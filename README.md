@@ -29,8 +29,9 @@ DISCLAIMER:
 This demo software has been rewritten for the sake of simplifying the
 implementation. Therefore, the results produced by the code may differ
 from those presented in the papers [1].
-In fact the results should be a bit better on the KITTI dataset:
+In fact the results should be better on the KITTI dataset:
 http://www.cvlibs.net/datasets/kitti/.
+
 ==========================================================================
 
 
