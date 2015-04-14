@@ -11,7 +11,8 @@
 
 
 ABOUT:
-This software implements our approach to optical flow estimation [1].
+This software implements our approach to optical flow estimation [1]
+with several data cost functions. 
 
 
 The additional and optional library
@@ -28,8 +29,9 @@ DISCLAIMER:
 This demo software has been rewritten for the sake of simplifying the
 implementation. Therefore, the results produced by the code may differ
 from those presented in the papers [1].
-In fact the results should be a bit better on the KITTI dataset
-(http://www.cvlibs.net/datasets/kitti/).
+In fact the results should be better on the KITTI dataset:
+http://www.cvlibs.net/datasets/kitti/.
+
 ==========================================================================
 
 
@@ -46,7 +48,7 @@ INSTALLING & RUNNING
 1.	(Optional) Download and install eigen from 
 	http://eigen.tuxfamily.org/index.php?title=Main_Page 
 	and place it into the folder ./Source.
-	Alternatively one can change the switch in the file compileMex
+	Alternatively one can change the switch in the file compileMex.m
 	to compile a slightly slower standalone version.
 	
 2.	Start MATLAB and run compileMex.m to build the utilities binaries.
