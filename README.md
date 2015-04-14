@@ -17,7 +17,7 @@ with several data cost functions.
 
 The additional and optional library
  - Eigen
-is not be included.
+is not included.
 
 To download that package follow the link:
 http://eigen.tuxfamily.org/index.php?title=Main_Page
@@ -30,7 +30,7 @@ This demo software has been rewritten for the sake of simplifying the
 implementation. Therefore, the results produced by the code may differ
 from those presented in the papers [1].
 In fact the results should be a bit better on the KITTI dataset
-(http://www.cvlibs.net/datasets/kitti/).
+http://www.cvlibs.net/datasets/kitti/.
 ==========================================================================
 
 

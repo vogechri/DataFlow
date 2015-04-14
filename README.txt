@@ -16,7 +16,7 @@ This software implements our approach to optical flow estimation [1].
 
 The additional and optional library
  - Eigen
-is not be included.
+is not included.
 
 To download that package follow the link:
 http://eigen.tuxfamily.org/index.php?title=Main_Page
