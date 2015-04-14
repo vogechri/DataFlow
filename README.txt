@@ -16,18 +16,19 @@ This software implements our approach to optical flow estimation [1].
 
 The additional and optional library
  - Eigen
-is not be included but can be downloaded from
-http://eigen.tuxfamily.org/index.php?title=Main_Page
-To download that package and read the licensing information provided there.
+is not be included.
 
+To download that package follow the link:
+http://eigen.tuxfamily.org/index.php?title=Main_Page
+and read the licensing information provided there.
 
 
 ==========================================================================
 DISCLAIMER:
 This demo software has been rewritten for the sake of simplifying the
 implementation. Therefore, the results produced by the code may differ
-from those presented in the papers [4].
-In fact the results should be a bit better on the KITTI dataset 
+from those presented in the papers [1].
+In fact the results should be a bit better on the KITTI dataset
 (http://www.cvlibs.net/datasets/kitti/).
 ==========================================================================
 

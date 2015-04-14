@@ -17,10 +17,11 @@ with several data cost functions.
 
 The additional and optional library
  - Eigen
-is not be included but can be downloaded from
-http://eigen.tuxfamily.org/index.php?title=Main_Page
-To download that package and read the licensing information provided there.
+is not be included.
 
+To download that package follow the link:
+http://eigen.tuxfamily.org/index.php?title=Main_Page
+and read the licensing information provided there.
 
 
 ==========================================================================
@@ -28,7 +29,7 @@ DISCLAIMER:
 This demo software has been rewritten for the sake of simplifying the
 implementation. Therefore, the results produced by the code may differ
 from those presented in the papers [1].
-In fact the results should be a bit better on the KITTI dataset 
+In fact the results should be a bit better on the KITTI dataset
 (http://www.cvlibs.net/datasets/kitti/).
 ==========================================================================
 
@@ -57,7 +58,7 @@ INSTALLING & RUNNING
 	
 3.	From folder DataFlow run calltest( xx ) - 
 	example given as comment in the code.
-	This will execute a kitti example.
+	This will execute a KITTI example.
 
 4.	Otherwise load images I1, I2 and run :
 	flow = Data_flow(1.25/255, 12.333, 3, 0.9, I1, I2, 10, 2, 1, 0, 0.5, 16, 0, 1)
